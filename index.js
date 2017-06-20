@@ -31,7 +31,7 @@ function calculate(operation, num1, num2, res){
 }
 
 app.get("/", function(req, res){
-  res.send("Hello there!")
+  res.sendFile("index.html", {root: __dirname});
 });
 
 app.get("/:operator/:num1/:num2", function(req, res){
